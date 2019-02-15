@@ -1,0 +1,100 @@
+Harvard University
+Stanford University
+University of California, Berkeley
+Massachusetts Institute of Technology (MIT)
+Princeton University
+California Institute of Technology
+Columbia University
+University of Chicago
+Yale University
+University of California, Los Angeles
+Cornell University
+University of California, San Diego
+University of Washington
+Johns Hopkins University
+University of Pennsylvania
+University of California, San Francisco
+University of Michigan-Ann Arbor
+Washington University in St. Louis
+Duke University
+Northwestern University
+University of Wisconsin - Madison
+New York University
+University of Illinois at Urbana-Champaign
+University of Minnesota, Twin Cities
+University of North Carolina at Chapel Hill
+Rockefeller University
+University of Colorado at Boulder
+University of California, Santa Barbara
+The University of Texas Southwestern Medical Center at Dallas
+The University of Texas at Austin
+University of Southern California
+University of Maryland, College Park
+University of California, Irvine
+Vanderbilt University
+Purdue University - West Lafayette
+Carnegie Mellon University
+University of Pittsburgh, Pittsburgh Campus
+Rice University
+Boston University
+University of California, Davis
+Pennsylvania State University - University Park
+The Ohio State University - Columbus
+University of California, Santa Cruz
+Mayo Medical School
+Brown University
+University of Florida
+Georgia Institute of Technology
+Rutgers, The State University of New Jersey - New Brunswick
+The University of Texas M. D. Anderson Cancer Center
+University of Utah
+Arizona State University
+Baylor College of Medicine
+Case Western Reserve University
+Emory University
+Icahn School of Medicine at Mount Sinai
+Indiana University Bloomington
+Michigan State University
+Texas A&M University
+Tufts University
+University of Arizona
+University of Rochester
+Oregon Health and Science University
+Oregon State University
+University of California, Riverside
+University of Delaware
+University of Hawaii at Manoa
+University of Iowa
+University of Massachusetts Amherst
+University of Massachusetts Medical School - Worcester
+University of Miami
+University of Virginia
+Brandeis University
+Colorado State University
+Dartmouth College
+Drexel University
+Florida State University
+George Mason University
+Indiana University-Purdue University at Indianapolis
+Iowa State University
+Medical University of South Carolina
+North Carolina State University - Raleigh
+Northeastern University
+Stony Brook University
+The University of Georgia
+The University of New Mexico - Albuquerque
+The University of Texas Health Science Center at Houston
+University of Alabama at Birmingham
+University of Cincinnati
+University of Houston
+University of Illinois at Chicago
+University of Kansas
+University of Maryland, Baltimore
+University of Missouri - Columbia
+University of Nebraska - Lincoln
+University of Notre Dame
+University of South Florida
+Virginia Commonwealth University
+Yeshiva University
+Boston College
+Georgetown University

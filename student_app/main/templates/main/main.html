@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
+	<table class="table table-sm table-hover">
+		<thead  class="thead-inverse">
+			<tr>
+				<th></th>
+				<th>Name</th>
+				<th>Birthday</th>
+				<th>Gender</th>
+				<th>Phone number</th>
+				<th>Study start</th>
+				<th>Study end</th>
+				<th>Group</th>
+				<th>University</th>
+				<th>Passport</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in list %}
+				<tr>
+					<th scope="row">{{forloop.counter}}</th>
+      				<td>{{i.0.name}}</td>
+      				<td>{{i.0.birthday}}</td>
+      				<td>{{i.0.gender}}</td>
+      				<td>{{i.0.phone}}</td>
+      				<td>{{i.0.startday}}</td>
+      				<td>{{i.0.endday}}</td>
+      				<td>{{i.0.group}}</td>
+      				<td>{{i.0.university}}</td>
+      				<td>{{i.1}}</td>
+      			</tr>
+      		{% endfor %}
+      	</tbody>
+	</table>
+	
+	<nav>
+		<ul class="pagination pagination-sm justify-content-center" style="margin:20px 0">
+        	{% if list.has_previous %}
+        		<li class="page-item ">
+            		<a class="page-link" href="?page=1">first</a>
+            	</li>
+            	<li class="page-item ">
+            		<a class="page-link" href="?page={{ list.previous_page_number }}">previous</a>
+            	</li>
+        	{% endif %}
+        	
+        	<p class="page-link">page {{ list.number }} of {{ list.paginator.num_pages }}</p>
+        	
+        	{% if list.has_next %}
+        		<li class="page-item ">
+            		<a class="page-link" href="?page={{ list.next_page_number }}">next</a>
+            	</li>
+            	<li class="page-item ">
+            		<a class="page-link" href="?page={{ list.paginator.num_pages }}">last</a>
+            	</li>
+        	{% endif %}
+        </ul>
+    </nav>
+
+{% endblock %}

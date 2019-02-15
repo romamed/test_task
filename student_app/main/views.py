@@ -1,11 +1,38 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from .models import Person
 from .models import Document
+from django.core.paginator import Paginator
 import main.generation as gen
+
+def main(request):
+    
+    person = Person.objects.all()
+    doc_list = Document.objects.filter(type="P")
+    
+    #passport = []
+    data = []
+    for item in person:
+        flag = False
+        for obj in doc_list:
+            if item.id == obj.person_id.id:
+                flag = True
+                data.append([item, obj.number])
+                break
+        if not flag:
+            data.append([item, 'no available'])
+    
+    paginator = Paginator(data, 15)
+    page = request.GET.get('page')
+    list = paginator.get_page(page)
+    
+    context = {'list': list}
+    
+    return render(request, 'main/main.html', context)
 
 def ajax_handler(request):
     """
-    Generate 10000 persons into data base.
+    Generate 10 persons into data base.
     """
     if request.method == 'POST':
         try:

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="post" action="{% url 'main' %}">
+	
+	<div class="container">
+		{% csrf_token %}
+		<br>
+		
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Name</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="Name">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Birthday</label>
+			
+			<label class="col-sm-2 col-form-label text-right">from</label>
+			<div class="col-sm-3">
+				<input type="date" class="form-control" name="Birthday_from">
+			</div>
+			
+			<label class="col-sm-2 col-form-label text-right">to</label>
+			<div class="col-sm-3">
+				<input type="date" class="form-control" name="Birthday_to">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Gender</label>
+			<div class="col-sm-10">
+				<select class="form-control" name="Gender">
+					<option>Male or Female</option>
+					<option>M</option>
+					<option>F</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Phone mumber</label>
+			<label class="col-sm-1 col-form-label text-right">+</label>
+			<div class="col-sm-9">
+				<input type="number" class="form-control" name="Phone">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Study start</label>
+			
+			<label class="col-sm-2 col-form-label text-right">from</label>
+			<div class="col-sm-3">
+				<input type="date" class="form-control" name="Study_start_from">
+			</div>
+			
+			<label class="col-sm-2 col-form-label text-right">to</label>
+			<div class="col-sm-3">
+				<input type="date" class="form-control" name="Study_start_to">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Study end</label>
+			
+			<label class="col-sm-2 col-form-label text-right">from</label>
+			<div class="col-sm-3">
+				<input type="date" class="form-control" name="Study_end_from">
+			</div>
+			
+			<label class="col-sm-2 col-form-label text-right">to</label>
+			<div class="col-sm-3">
+				<input type="date" class="form-control" name="Study_end_to">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Group</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="Group">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">University</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="University">
+			</div>
+		</div>
+		
+		<div class="row justify-content-center">
+    		<input type="submit" class="btn btn-link btn-sm" name="but" id="but" value="Search"/>
+    	</div>
+	</div>
+	
+	</form>
+	
+	
+{% endblock %}

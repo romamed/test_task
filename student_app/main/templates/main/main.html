@@ -46,7 +46,9 @@
             	</li>
         	{% endif %}
         	
-        	<p class="page-link">page {{ list.number }} of {{ list.paginator.num_pages }}</p>
+        	<li class="page-item ">
+        		<p class="page-link">page {{ list.number }} of {{ list.paginator.num_pages }}</p>
+        	</li>
         	
         	{% if list.has_next %}
         		<li class="page-item ">
@@ -58,5 +60,9 @@
         	{% endif %}
         </ul>
     </nav>
-
+    
+    <div class="row justify-content-center">
+    	<a class="btn btn-link btn-sm" href="{% url 'search' %}" role="button">Go to search page</a>
+    </div>
+    
 {% endblock %}

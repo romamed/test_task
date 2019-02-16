@@ -6,11 +6,53 @@ from django.core.paginator import Paginator
 import main.generation as gen
 
 def main(request):
-    
     person = Person.objects.all()
-    doc_list = Document.objects.filter(type="P")
     
-    #passport = []
+    if request.method == 'POST':
+        if 'but' in request.POST:
+            if not request.POST['Name'] == '':
+                person = person.filter(name=request.POST['Name'])
+            
+            if not request.POST['Birthday_from'] == '':
+                person = person.filter(birthday__gte=request.POST['Birthday_from'])
+            
+            if not request.POST['Birthday_to'] == '':
+                person = person.filter(birthday__lte=request.POST['Birthday_to'])
+            
+            if not request.POST['Gender'] == 'Male or Female':
+                person = person.filter(gender=request.POST['Gender'])
+            
+            if not request.POST['Phone'] == '':
+                person = person.filter(phone='+'+request.POST['Phone'])
+            
+            if not request.POST['Study_start_from'] == '':
+                person = person.filter(startday__gte=request.POST['Study_start_from'])
+            
+            if not request.POST['Study_start_to'] == '':
+                person = person.filter(startday__lte=request.POST['Study_start_to'])
+            
+            if not request.POST['Study_end_from'] == '':
+                person = person.filter(startday__gte=request.POST['Study_end_from'])
+            
+            if not request.POST['Study_end_to'] == '':
+                person = person.filter(startday__lte=request.POST['Study_end_to'])
+            
+            if not request.POST['Group'] == '':
+                person = person.filter(group=request.POST['Group'])
+            
+            if not request.POST['University'] == '':
+                person = person.filter(university=request.POST['University'])
+            
+            doc_list = []
+            for item in person:
+                try:
+                    temp = Document.objects.get(person_id=item, type="P")
+                    doc_list.append(temp)
+                except:
+                    pass
+    else:
+        doc_list = Document.objects.filter(type="P")
+    
     data = []
     for item in person:
         flag = False
@@ -29,6 +71,10 @@ def main(request):
     context = {'list': list}
     
     return render(request, 'main/main.html', context)
+
+def search(request):
+    
+    return render(request, 'main/search.html')
 
 def ajax_handler(request):
     """
